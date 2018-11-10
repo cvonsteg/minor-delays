@@ -10,7 +10,7 @@ class TFL:
     def print_status(self):
         statuses = self.status_dict()
         for k, v in statuses.items():
-            print(f'Line: {k}\nStatus: {v}\n')
+            print(f'\nLine: {k}\nStatus: {v}\n')
 
     def status_dict(self):
         return {self.tube_status(i)[0]: self.tube_status(i)[1] for i in self.lines}

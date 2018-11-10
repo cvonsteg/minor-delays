@@ -3,7 +3,6 @@ import json
 
 class TFL:
     def __init__(self, lines):
-        # self.lines = [line for line in args]
         self.lines = lines 
         self.request = requests.get('https://api.tfl.gov.uk/line/mode/tube/status').json()
 

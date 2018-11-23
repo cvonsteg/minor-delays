@@ -6,7 +6,6 @@ from tubes.tfl import TFL
 
 def main():
     TUBES = [tube for tube in sys.argv[1:] if tube is not None]
-    
     print(" --- Loading TFL class --- ")
     tfl = TFL(TUBES)
     SUBJECT='Your Morning Tube Status'

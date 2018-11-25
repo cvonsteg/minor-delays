@@ -1,8 +1,8 @@
 import requests
 
 class TFL:
+    """Class for returning TFL status update """
     def __init__(self, lines):
-        """Class for returning TFL status update """
         self.lines = lines
         self.request = None
         # Populate request
@@ -20,7 +20,6 @@ class TFL:
                return (line_wanted, self.request[i]['lineStatuses'][0]['statusSeverityDescription'])
             else:
                 pass
-                #out = (line_wanted, "Wanted line not found")
 
     def status_dict(self):
         """Create dictionary of tube status with line name as key and status as value"""

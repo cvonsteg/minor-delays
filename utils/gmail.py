@@ -7,8 +7,6 @@ class Gmail(SMTP):
 
     def send(self, msg):
         self.ehlo_or_helo_if_needed()
-        #self.starttls()
-        #self.ehlo()
         self.login(os.environ['TUBE_FROM'], os.environ['PWD'])
         self.sendmail(os.environ['TUBE_FROM'], os.environ['TUBE_TO'], msg)
         self.quit()
